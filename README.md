@@ -2,7 +2,9 @@
 
 Are loyalty programs a valid strategy for airline companies to overcome post-pandemic hardships?
 
+### Google Slides Presentation link
 https://docs.google.com/presentation/d/1k4jHjoYMHhdZKnQShsRYQK2yTnBShRqGOoqXQPvVq5U/edit?usp=sharing
+
 
 ## Selected Topic
 Covid-19 has turned the whole world upside down. Many of the strongest, toughest industries have had to rethink their business models and strategies. Governments and companies alike, have come to realize that they cannot keep working the same way as before the pandemic. Time has come to make necessary adjustments to survive and to rebuild what has been affected. 
@@ -28,95 +30,149 @@ As stated previously, companies are actively trying to regain what was lost duri
 
 In order to obtain some knowledge about the main issue at hand, a few other questions were born. First of all, can a machine learning model predict the type of customer (loyal vs disloyal) a ticket purchaser will become in the future? What factors are highly correlated to the decision to become a loyal customer? Secondly, which are the areas of opportunity?; especifically, where during the "buying of a ticket to completing the flight" process does the company lose or gain the client's loyalty? 
 
-
-## Communication protocols
-Roles are assigned to every member of the investigation team. Based on these, coworkers know their particular set of activities and responsiblities and boundaries were set between each position in order to maintain a cohesive and ordered workspace. In order to accomplish an effective workflow, there is a team member assigned to manage any requests or complaints from the rest of the team. If there are any issues to be handled, there will be a 15-min session on Saturdays to work it out. 
-
-During weekdays, the team meeting is designated on Tuesdays and Thursdays from 7:00pm to 10:00pm. During this time, team members can work on their individual activities or brain-storm about general issues met during the investigation. An additional meeting was set on Saturdays in order to review the week's advances and plan for the week ahead. 
-
-The official tool for communicating is Slack. Any and all investigation related topics shall be discussed using the official channels in order to keep track of the team's progress. 
-
-
 ## Data exploration phase of the project 
 The investigation began by a general analysis of the tourism and travel industry and how it changed during the course of the pandemic, with the purpose of understading the current situation better. Once that was done, the data analytics team looked for databases that could be used to implement our proposed model and build up the prediction strategy. 
 
 Many databases were compared, looking for data that represented the current industry's situation more precisely. However, we are currently developing our machine-learning model based on the database previously mentioned. 
 
 ## Description of the analysis phase of the project
-At this point in the investigation, the team is tirelessly working towards achieving the best possible machine-learning model. Many tweaks are being analyzed in order to make our predictions stronger. 
+At this point in the investigation, the team is working towards achieving the best possible machine-learning model. Many tweaks are being analyzed in order to make our predictions stronger. 
 
 
 ### Database
-The dataset contains an airline passenger satisfaction survey, the factors that lead the customer satisfaction for an Airline. The dataset contains 25,976 rows for the test and 103,904 rows for training.
+The database contains an airline passenger satisfaction survey, the factors that lead the customer satisfaction for an Airline. The database contains 103,904 data points for training and 25,976 data points for test with the following columns:
 
 | Column | Data Type | Description |
 | ------------- | ------------- |  ------------- |
-| **Gender** | VARCHAR(6) | Gender of the passengers (Female/Male)  |
-| **Customer_Type** | VARCHAR(32)  | The customer type (Loyal customer/Disloyal customer)  |
-| **Age** | INT | The actual age of the passengers |
-| **Type_Travel** | VARCHAR(32) | Purpose of the flight of the passengers (Personal Travel/Business Travel) |
-| **Class** | VARCHAR(16) | Travel class in the plane of the passengers (Business/Eco/Eco Plus) |
-| **Flight_distance** | INT | The flight distance of this journey |
-<<<<<<< HEAD
-=======
-| **Inflight_WiFi_service** | SMALLINT | Satisfaction level of the inflight WiFi service (0:Not Applicable; 1-5) |
-| **Departure/Arrival_time** | SMALLINT | Satisfaction level of Departure/Arrival time convenient (1-5) |
-| **Ease_Online_booking** | SMALLINT | Satisfaction level of online booking (1-5) |
-| **Gate_location** | SMALLINT | Satisfaction level of Gate location (1-5) |
-| **Food_and_drink** | SMALLINT | Satisfaction level of Food and drink (1-5) |
-| **Online_boarding** | SMALLINT | Satisfaction level of online boarding (1-5) |
-| **Seat_comfort** | SMALLINT | Satisfaction level of Seat comfort (1-5) |
-| **Inflight_entertainment** | SMALLINT | Satisfaction level of inflight entertainment (1-5) |
-| **On_board_service** | SMALLINT | Satisfaction level of On-board service (1-5) |
-| **Leg_room_service** | SMALLINT | Satisfaction level of Leg room service (1-5) |
-| **Baggage_handling** | SMALLINT | Satisfaction level of baggage handling (1-5) |
-| **Check_in_service** | SMALLINT | Satisfaction level of Check-in service (1-5) |
-| **Inflight_service** | SMALLINT | Satisfaction level of inflight service (1-5) |
-| **Cleanliness** | SMALLINT | Satisfaction level of Cleanliness (1-5) |
-| **Departure_Delay** | SMALLINT | Minutes delayed when departure (1-5) |
-| **Arrival_Delay** | SMALLINT | Minutes delayed when Arrival (1-5) |
-| **Satisfaction** | BOOLEAN | Airline satisfaction level (Satisfaction/neutral or dissatisfaction) |
+| **Gender** | varchar(6) | Gender of the passengers (Female/Male)  |
+| **Customer Type** | varchar(32)  | The customer type (Loyal customer/Disloyal customer)  |
+| **Age** | int | The actual age of the passengers |
+| **Type Travel** | varchar(32) | Purpose of the flight of the passengers (Personal Travel/Business Travel) |
+| **Class** | varchar(16) | Travel class in the plane of the passengers (Business/Eco/Eco Plus) |
+| **Flight distance** | int | The flight distance of this journey |
+| **Inflight WiFi service** | int | Satisfaction level of the inflight WiFi service (0:Not Applicable; 1-5) |
+| **Departure/Arrival_time** | int | Satisfaction level of Departure/Arrival time convenient (1-5) |
+| **Ease Online booking** | int | Satisfaction level of online booking (1-5) |
+| **Gate location** | int | Satisfaction level of Gate location (1-5) |
+| **Food and drink** | int | Satisfaction level of Food and drink (1-5) |
+| **Online boarding** | int | Satisfaction level of online boarding (1-5) |
+| **Seat comfort** | int | Satisfaction level of Seat comfort (1-5) |
+| **Inflight entertainment** | int | Satisfaction level of inflight entertainment (1-5) |
+| **On board service** | int | Satisfaction level of On-board service (1-5) |
+| **Leg room service** | int | Satisfaction level of Leg room service (1-5) |
+| **Baggage handling** | int | Satisfaction level of baggage handling (1-5) |
+| **Check in service** | int | Satisfaction level of Check-in service (1-5) |
+| **Inflight service** | int | Satisfaction level of inflight service (1-5) |
+| **Cleanliness** | int | Satisfaction level of Cleanliness (1-5) |
+| **Departure Delay** | int | Minutes delayed when departure |
+| **Arrival Delay** | int | Minutes delayed when Arrival |
+| **Satisfaction** | varchar(32) | Airline satisfaction level (Satisfaction/neutral or dissatisfaction) |
 
->>>>>>> 90e10896df947fd61c884d4b21e8b9b3d85e48c9
-
-### Supervised Learning Model
+## Machine Learning Model
 Machine learning is the use of statistical algorithms to perform tasks such as learning from data patterns and making predictions.
 
-Supervised learning is an approach to creating artificial intelligence, where a our algorithm is trained on input data of Airline Passenger Satisfaction,that has been labeled. The model will be trained until it can detect a relationships between the input data and the output labels.
+Supervised learning is an approach to creating artificial intelligence, where our algorithm is trained on input data of Airline Passenger Satisfaction,that has been labeled. The model will be trained until it can detect a relationship between the input data and the output labels.
 
 In this project we are determining the satisfaction for a future customer. 
 
-![Graph](images/MLM.png)
 
-#### Preliminary data preprocessing 
-In order to clean and prepar the data for the model, several steps were established. They go as follows:
-1. It was first checked for null or empty values. If so, they were dropped from our dataframe.
-2. Secondly, every column was defined as either numerical or categorical. 
-3. Identifying unique values in every column.   
-4. Based on those unique values, categorical columns were encoded to transform them into numerical values.
-5. Bins were created for several numerical columns in order to better use data for analysis.
-6. Several columns were dropped because they were identifiers of some sort. 
-7. Data was then sent to Postgresql using Amazon Web Services. 
+#### Dataset Information
+This dataset contains the outcomes of **103,904** airline passenger satisfaction survey. The variables of this dataset are highly correlated to predict if the passenger could become a loyal customer. According to the importance of customer loyalty programs - statistics and trends, **80%** of a company’s future revenue will come from just 20% of existing clients. This way, the airline could launch a loyalty program strategy to overcome the post-pandemic hardships. 
 
-#### Preliminary feature engineering and preliminary feature selection
+The dataset includes the following columns:
+
+* `gender`: Gender of the passengers (Female/Male).
+* `customer type`: The customer type (Loyal customer/Disloyal customer).
+* `age`: The actual age of the passengers.
+* `type travel`: Purpose of the flight of the passengers (Personal Travel/Business Travel).
+* `class`: Travel class in the plane of the passengers (Business/Eco/Eco Plus).
+* `flight distance`: The flight distance of this journey.
+* `departure delay`: Minutes delayed when departure.
+* `arrival delay`: Minutes delayed when arrival.
+* `satisfaction`: Airline satisfaction level (satisfied/neutral or dissatisfied).
+
+<img src="images/mlm_01.PNG" width="650" >
+
+To start the data preprocessing, the dataset was then sent to Postgresql using Amazon Web Services.
+
+#### Data preprocessing 
+The dataset contains categorical and text features (gender, customer type, type travel, class and satisfaction). Therefore, these features 
+must be converted to numerical data for use in our machine learning model. In order to clean and prepare the data for the model, several steps were established. They go as follows:
+
+1. Detect missing values with the Pandas DataFrame function *isna()*.
+2. Make sure we are using the correct variables data types -Pandas DataFrame *dtypes* property.
+3. Use Scikit-learns *LabelEncoder* module to transform categorical and text variables into numerical data as follows:
+    
+* `gender`: 0 (Female), 1 (Male)
+* `customer_type`: 0 (Loyal Customer), 1 (Disloyal Customer)
+* `type_travel`: 0 (Business travel), 1 (Personal Travel) 
+* `class`: 0 (Business), 1 (Eco), 2 (Eco Plus)
+* `satisfaction`: 0 (neutral or dissatisfied), 1 (satisfied)
+
+4. Drop the identification `id` column.
+5. Finally, verify the information about the DataFrame, including the index type and columns, non-null values, and memory usage.
+
+<img src="images/mlm_02.PNG" width="650" >
+
+#### Feature engineering and feature selection
 Based on available data, the decision was made to keep every column except for any column that worked as an identifier. This was decided because the rest of the columns referred to customer satisfaction and flight characteristics. Bottom line, all the rest of available columns have an impact on loyalty, and therefore, were considered to be important for the analysis.  
 
 #### Splitting data into training and testing sets
-The defined target was Customer type, where only two options are available: loyal or disloyal.
-On the other hand, our features can be found on the Database section of this document.  
+The defined target was Customer type, where only two options are available: loyal or disloyal. On the other hand, our features can be found on the Database section of this document.  
 
-The data's split for the purpose of this model is as follows: 75% dedicated to training the model and 25% dedicated to testing the model. This decision was made based on the fact that the library train_test_split uses those arguments by default. 
+We split the dataset into **random** train and test subsets using the Scikit-learn **train_test_split** module. The training subset will be used in the model to learn from it and the testing subset to assess its performance. We configure the **train_test_split** module with four arguments:
 
+* The `input X` variables
+* The `output y` or what we wish to predict: **Customer type** 
+* `random_state` of 1 to ensure that the equals rows are assigned to train and test sets, respectively.
+* `stratify` enabled to divide the number of loyal and disloyal customers proportionally 
 
-#### Explanation of model choice, including limitations and benefits
-The model chosen was logistic regression. These models are used to analyze data and, mathematically determining the probability of new samples belonging to a class. There are only two possible answers.
+#### Model choice
+The model chosen was logistic regression. A logistic regression model is a classification algorithm that can analyze continuous and categorical variables. With the combination of input variables, logistic regression predicts the probability of the input data belonging to one of two groups. On the other hand, we consider a logistic regression model due to the number of data points in our dataset being fewer than two hundred thousand (103,904) with eight independent variables and one target. Also, our dataset contains numerical and categorical variables.
 
-For this investigation,  the objective was to predict whether new purchasing clients will be loyal or disloyal. The purpose of predicting this outcome is to create better loyalty programs and to dedicate resources to the right customers. 
+For this investigation, the objective was to predict whether new purchasing clients will be loyal or disloyal. The purpose of predicting this outcome is to create better loyalty programs and to dedicate resources to the right customers. 
 
 After creating the model, it was confirmed that this particular data could be correctly analyzed using this strategy.
 
+<img src="images/mlm_03.PNG" width="550" >
 
-### Technologies
+<img src="images/lgm.png" width="250" >
+
+#### Fit (train) the model using the training data
+Due to the variables values of flight distance and flight delay (departure and arrival) in miles and minutes, respectively, the data train subset was scaled using the Scikit-learn **StandardScaler** module. After adjusting the training dataset, we trained the logistic regression model using the **fit()** method with **77,928 data points**.
+
+<img src="images/mlm_04.PNG" width="400" >
+
+<img src="images/mlm_05.PNG" width="450" >
+
+#### Final Accuracy score
+The model achieved an accuracy score of **0.89** which means that nine of ten observations in the testing set were predicted correctly. Thus, this extremely high metric should raise our suspicion of **overfitting**. However, testing the model with another dataset that contains the outcomes of **25,976** airline passenger satisfaction surveys turns out a similar accuracy score of **0.9**
+
+<img src="images/mlm_06.PNG" width="450" >
+
+#### Confusion Matrix
+**Precision**
+
+From our results, the precision for the loyal customers can be determined by the ratio TP/ (TP + FP), which is 20,082/ (20,082 + 1,758) = 0.9195. The precision for the disloyal customers can be determined as follows: 2,987/ (2,987 + 1,149) = 0.7221. Thus, this high precision is indicative of a low number of false positives predictions.
+
+**Recall**
+
+From our results, the recall for the loyal customers can be determined by the ratio TP/ (TP + FN), which is 20,082/ (20,082 + 1,149) = 0.9458. The recall for the disloyal customers can be determined as follows: 2,987/ (2,987 + 1,758) = 0.6295. Thus, this high recall is indicative of a low number of false negative predictions.
+
+**F1 score**
+
+From our results, the harmonic mean can be determined by the formula 2(Precision * Sensitivity)/ (Precision + Sensitivity), which is 0.93 and 0.67 for the loyal and disloyal customers, respectively. Therefore, the high sensitivity means that among loyal customers, most of them will be diagnosed correctly. High precision, on the other hand, means that if the test comes back positive, there's a high likelihood that the customer is loyal.
+
+<img src="images/mlm_07.PNG" width="450" >
+
+<img src="images/mlm_08.PNG" width="450" >
+
+
+![Outline Process](https://user-images.githubusercontent.com/90433064/157601017-43c386fa-95ba-4781-9cac-69145ee982b4.jpg)
+
+
+
+## Technologies
 
 **Jupyter Notebook** -  https://jupyter.org/
 
@@ -137,11 +193,11 @@ It will help us to plot, debugg, and manage our data, mainly to find correlation
 Visualization software of interactive data that will help us to show the results in a better comprehensive way. 
 
 
-### Dashboard
+## Dashboard
 Tableau is a visual analytics engine that makes it easier to create interactive visual analytics in the form of dashboards.
 We choose Tableau to create our dashboard because is a powerful tool with data visualization capabilities and data can be analyzed very quickly. Tableau allows us to create workbooks with all the data to guide us in our exploration.
 
 The integration to work with raw data was definitively a key functionality so we can import our database and work directly in different worksheets. Adding datasets was very simple, we create a CSV file from the current database located in AWS. When we process all the dashboards it was easy to share the story and collaborate with the team.
 
 #### Description of interactive element(s)
-One of the most interesting tools that Tableau provides is interactivity. Some of the graphs created can be modified by the viewer using several filters in order to make a deeper analysis. The tableau dashboard can be viewed publicly here: https://public.tableau.com/views/SatisfactionFinal/PassengerSatisfaction?:language=en-US&:display_count=n&:origin=viz_share_link
+One of the most interesting tools that Tableau provides is interactivity. Some of the graphs created can be modified by the viewer using several filters in order to make a deeper analysis. The tableau dashboard can be viewed publicly here: https://public.tableau.com/app/profile/jesus.salas6470/viz/Dashboard_16464975652980/FinalDashboard
